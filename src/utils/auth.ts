@@ -1,0 +1,17 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Cookies from "js-cookie";
+
+const TokenKey = "Admin-Token";
+
+export function getToken() {
+  return Cookies.get(TokenKey);
+}
+
+export function setToken(token: object) {
+  return Cookies.set(TokenKey, token);
+}
+
+export function removeToken() {
+  return Cookies.remove(TokenKey);
+}

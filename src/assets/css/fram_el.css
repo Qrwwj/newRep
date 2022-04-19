@@ -1,0 +1,12 @@
+.el-header{
+    padding: 0;
+}
+.el-container{
+    height: 100%;
+}
+.el-menu{
+    border: none;
+}
+.el-main{
+    border-left: #ccc 1px solid;
+}

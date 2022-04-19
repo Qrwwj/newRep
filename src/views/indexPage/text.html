@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="../../assets/css/text.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+  <button onclick="subtract()">-</button>
+
+  <span data-before="9" data-after="11" value="10"></span>
+  <button onclick="add()">+</button>
+</div>
+<script>
+  var span = document.getElementsByTagName("span")[0];
+  console.log('span',span)
+  var count = 10; //计数初始值
+  var count_befor = count - 1;
+  var count_after = count + 1;
+  // span.setAttribute("value", count);
+  // 因为如果用value属性作为span的值，那么span标签之间不能有值，
+  //但是没有值，就不能占位文本流，所有用innerText替换。
+  span.innerText = count;
+  span.setAttribute("data-before", count_befor);
+  span.setAttribute("data-after", count_after);
+
+  function add() {
+    span.classList.add("after");
+    setTimeout(function() {
+      this.count = this.count + 1;
+      this.count_befor = this.count - 1;
+      this.count_after = this.count + 1;
+
+      span.innerText = count;
+      span.setAttribute("data-before", this.count_befor);
+      span.setAttribute("data-after", this.count_after);
+      span.classList.remove("after");
+
+    }, 300); //这里时间跟动画时间一样
+  }
+
+  function subtract() {
+    span.classList.add("before");
+    setTimeout(function() {
+      this.count = this.count - 1;
+      this.count_befor = this.count - 1;
+      this.count_after = this.count + 1;
+
+      span.innerText = count;
+      span.setAttribute("data-before", this.count_befor);
+      span.setAttribute("data-after", this.count_after);
+      span.classList.remove("before");
+    }, 300); //这里时间跟动画时间一样
+  }</script>
+</body>
+</html>

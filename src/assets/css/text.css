@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 100px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 1rem;
+    background-color: #000000;
+    border-radius: 0.2rem;
+    display: flex;
+    overflow: hidden;
+    padding: .4rem 0;
+}
+
+.container span {
+    flex: 0 1 5rem;
+    color: white;
+    font-weight: bold;
+    line-height: 1rem;
+    text-align: center;
+    transform: translateY(-1rem);
+
+}
+
+.container span::before {
+    content: attr(data-before);
+    display: block;
+    color: rgba(143, 140, 140, 0.26);
+}
+
+.container span::after {
+    content: attr(data-after);
+    display: block;
+    color: rgba(143, 140, 140, 0.26);
+}
+
+span.before {
+    transform: translateY(0rem);
+    transition: 0.3s ease-in;
+}
+
+span.after {
+    transform: translateY(-2rem);
+    transition: 0.3s ease-in;
+}
+
+.container button {
+    flex: 0 0 1rem;
+    border: none;
+    background: none;
+    color: white;
+    font-size: .6rem;
+    line-height: 1rem;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;/*chrome点击出现的蓝色边框，去除*/
+}
