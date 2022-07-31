@@ -33,7 +33,7 @@ export default class Login extends Vue {
     this.$store.dispatch("setMessage", this.loginFrom);
     console.log("data", this.$store.getters.getUser);
     setToken(this.loginFrom);
-    this.$router.push({ path: "/homePage" });
+    this.$router.push({ path: "/" });
   }
 }
 </script>

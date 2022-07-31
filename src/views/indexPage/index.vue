@@ -2,17 +2,17 @@
   <div class="index" id="index">
     <div style="display: flex">
       <div class="container_index">
-        <span :data-before="count_befor" :data-after="count_after">{{
+        <span :data-before="count_before" :data-after="count_after">{{
           count_1
         }}</span>
       </div>
       <div class="container_index">
-        <span :data-before="count_befor" :data-after="count_after">{{
+        <span :data-before="count_before" :data-after="count_after">{{
           count_2
         }}</span>
       </div>
       <div class="container_index">
-        <span :data-before="count_befor" :data-after="count_after">{{
+        <span :data-before="count_before" :data-after="count_after">{{
           count_3
         }}</span>
       </div>
@@ -83,6 +83,12 @@
     <div class="progress-1"></div>
     <formCo></formCo>
   </div>
+  <el-table :data="tableData" element-loading-text="拼命加载中...">
+    <el-table-column type="index" label="序号" width="50"></el-table-column>
+    <el-table-column type="index" label="序号"></el-table-column>
+    <el-table-column type="index" label="序号"></el-table-column>
+    <el-table-column type="index" label="序号"></el-table-column>
+  </el-table>
 </template>
 <script lang="ts">
 import formCo from "../../components/component.vue";
@@ -116,13 +122,30 @@ export default class index extends Vue {
   count_1 = 0;
   count_2 = 0;
   count_3 = 0;
-  count_befor = 9;
+  count_before = 9;
   count_after = 1;
+  tableData = [];
 
   mounted() {
+    let years = [2018, 2019, 2020, 2021];
+    let copyYears = [...years];
+    copyYears.push(2020);
+    console.log("years", years);
+    console.log("copyYears", copyYears);
+    let [a, b, ...other] = years;
+    console.log(a, b);
+    console.log(other);
+    let product = {
+      id: 1,
+      title: "Nike Air Zoom Pegasus 38",
+      product_image: "/resources/products/01.jpeg",
+      shown: "White/Pure Platinum/Midnight Navy/Wolf Grey",
+      price: 120,
+    };
+    Object.freeze(product);
+    const { id, price, title } = product;
+    console.log(id, price, title);
     // eslint-disable-next-line @typescript-eslint/no-this-alias
-    const that = this;
-    const dom = document.getElementsByTagName("span")[0];
     // setInterval(function () {
     //   if (that.count_3 >= 9) {
     //     that.count_3 = 0;

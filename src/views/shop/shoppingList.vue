@@ -1,5 +1,5 @@
 <template>
-  <div class="shoppingPage" id="shoppingPage"></div>
+  <div class="shoppingPage" id="shoppingPage">z</div>
 </template>
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";

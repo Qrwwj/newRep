@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71d2d9ee-4a32-4401-bdb3-f1dc022079d0" name="默认变更列表" comment="" />
+    <list default="true" id="71d2d9ee-4a32-4401-bdb3-f1dc022079d0" name="默认变更列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/eslint/cd4b025a.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/eslint/cd4b025a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/indexPage/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/indexPage/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/indexPage/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/indexPage/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/shop/shoppingList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/shop/shoppingList.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="280gZHJ4bGPm0XXKHtswjPB3Fcj" />
   <component name="ProjectViewState">
@@ -20,9 +37,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.serve">
+    <configuration name="debug:8080" type="JavascriptDebugType" uri="http://localhost:8080/" useFirstLineBreakpoints="true">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -43,6 +66,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript 调试.debug:8080" />
+      <item itemvalue="npm.serve" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,11 +80,47 @@
       <option name="presentableId" value="Default" />
       <updated>1650358970933</updated>
       <workItem from="1650358972001" duration="9000" />
-      <workItem from="1650359195297" duration="568000" />
+      <workItem from="1650359195297" duration="719000" />
+      <workItem from="1650416031635" duration="1218000" />
+      <workItem from="1657613168714" duration="2450000" />
+      <workItem from="1657676494052" duration="8091000" />
+      <workItem from="1657761357559" duration="7270000" />
+      <workItem from="1658198451658" duration="5235000" />
+      <workItem from="1658283994462" duration="5794000" />
+      <workItem from="1658365335968" duration="3240000" />
+      <workItem from="1658384349318" duration="124000" />
+      <workItem from="1658388836846" duration="1380000" />
+      <workItem from="1658454257114" duration="3339000" />
+      <workItem from="1658818462012" duration="2741000" />
+      <workItem from="1658826581505" duration="457000" />
+      <workItem from="1658885108024" duration="819000" />
+      <workItem from="1658888821461" duration="21000" />
+      <workItem from="1659086081369" duration="702000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/permission.ts</url>
+          <line>6</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/permission.ts</url>
+          <line>10</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/permission.ts</url>
+          <line>13</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
