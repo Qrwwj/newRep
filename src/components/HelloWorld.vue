@@ -8,49 +8,53 @@
         <el-container>
           <el-aside width="200px">
             <el-menu
-              default-active="2"
+              :default-active="activeIndex"
               class="el-menu-vertical-demo"
+              v-for="item in routerLists"
+              :key="item.path"
               router
               @open="handleOpen"
               @close="handleClose"
             >
-              <el-sub-menu index="1">
-                <template #title>
-                  <el-icon>
-                    <location />
-                  </el-icon>
-                  <span>Navigator One</span>
-                </template>
-                <el-menu-item-group title="Group One">
-                  <el-menu-item index="/index_page">item one</el-menu-item>
-                  <el-menu-item index="1-2">item one</el-menu-item>
-                </el-menu-item-group>
-                <el-menu-item-group title="Group Two">
-                  <el-menu-item index="1-3">item three</el-menu-item>
-                </el-menu-item-group>
-                <el-sub-menu index="1-4">
-                  <template #title>item four</template>
-                  <el-menu-item index="1-4-1">item one</el-menu-item>
+              <!-- 有二级菜单 -->
+              <div v-if="item.children && item.children.length !== 0">
+                <el-sub-menu :index="item.path">
+                  <template #title>
+                    <el-icon>
+                      <location />
+                    </el-icon>
+                    <span>{{ item.title }}</span>
+                  </template>
+                  <!-- 判断是否有三级菜单 -->
+                  <div v-for="itemSon in item.children" :key="itemSon.path">
+                    <div
+                      v-if="itemSon.children && itemSon.children.length !== 0"
+                    >
+                      <el-sub-menu :index="itemSon.path">
+                        <template #title>{{ itemSon.title }}</template>
+                        <el-menu-item
+                          :index="itemGroundSon.path"
+                          v-for="itemGroundSon in itemSon.children"
+                          :key="itemGroundSon.path"
+                          >{{ itemGroundSon.title }}</el-menu-item
+                        >
+                      </el-sub-menu>
+                    </div>
+                    <div v-else>
+                      <el-menu-item :index="itemSon.path">{{
+                        itemSon.title
+                      }}</el-menu-item>
+                    </div>
+                  </div>
                 </el-sub-menu>
-              </el-sub-menu>
-              <el-menu-item index="/ shoppingPage">
-                <el-icon>
-                  <icon-menu />
-                </el-icon>
-                <span>Navigator Two</span>
-              </el-menu-item>
-              <el-menu-item index="3" disabled>
-                <el-icon>
-                  <document />
-                </el-icon>
-                <span>Navigator Three</span>
-              </el-menu-item>
-              <el-menu-item index="4">
-                <el-icon>
-                  <setting />
-                </el-icon>
-                <span>Navigator Four</span>
-              </el-menu-item>
+              </div>
+              <!-- 没有二级菜单 -->
+              <div v-else>
+                <el-menu-item :index="item.path">
+                  <el-icon><icon-menu /></el-icon>
+                  <span>{{ item.title }}</span>
+                </el-menu-item>
+              </div>
             </el-menu>
           </el-aside>
           <el-main>
@@ -60,10 +64,11 @@
       </div>
     </el-container>
   </div>
-</template> 
+</template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import { routeList } from "@/router/modules/routeList";
 import {
   Location,
   Document,
@@ -82,11 +87,16 @@ import {
 })
 export default class HelloWorld extends Vue {
   routerData: object = {};
+  routerLists: Array<any> = [];
+  activeIndex = "";
 
   created() {
+    console.log("routeList", routeList);
+    this.routerLists = routeList;
     const route = this.$route;
     console.log("route", route);
     const { meta, path } = route;
+    this.activeIndex = path;
     // this.routerData = this.$route.matched[0].children;
     console.log("meta", meta);
     console.log("path", path);

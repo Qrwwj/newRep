@@ -48,7 +48,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "no-trailing-spaces": 0
+    }
   },
   "browserslist": [
     "> 1%",

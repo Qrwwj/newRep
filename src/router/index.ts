@@ -5,7 +5,7 @@ import IndexPage from "../views/homePage/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/homePage",
+    path: "/",
     name: "home",
     component: HomeView,
     children: [
@@ -25,6 +25,11 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("../views/shop/shoppingList.vue"),
         children: [],
       },
+      {
+        path: "/:catchAll(.*)", // 不识别的path自动匹配404
+        name: "PageNotExist",
+        component: () => import("../views/errorPage/404View.vue"),
+      },
     ],
   },
   {
@@ -32,6 +37,10 @@ const routes: Array<RouteRecordRaw> = [
     name: "login",
     component: () => import("../views/login/Login.vue"),
   },
+  // {
+  //   path: "/:catchAll(.*)", // 不识别的path自动匹配404
+  //   redirect: "/404",//重定向
+  // },
 ];
 
 const router = createRouter({

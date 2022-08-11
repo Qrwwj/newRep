@@ -13,6 +13,7 @@ router.beforeEach(async (to, from, next) => {
       // if is logged in, redirect to the home page
       next({ path: "/" });
     } else {
+      console.log("aaaa", to.path);
       next();
     }
   } else {

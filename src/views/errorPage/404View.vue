@@ -1,18 +1,6 @@
 <template>
   <div class="shoppingPage" id="shoppingPage">
-    <el-input v-model="name" placeholder="请输入名称"></el-input>
-    <el-button type="" @click="btn">cdc</el-button>
     <div class="img_box"></div>
-    <div class="s_box"></div>
-    <div class="test"></div>
-    <div class="nav">
-      <a href="javascript:;">导航1</a>
-      <a href="javascript:;">导航2</a>
-      <a href="javascript:;">导航3</a>
-      <a href="javascript:;">导航4</a>
-      <a href="javascript:;">导航5</a>
-      <a href="javascript:;">导航6</a>
-    </div>
   </div>
 </template>
 <script lang="ts">
