@@ -1,7 +1,6 @@
 <template>
   <div class="shoppingPage" id="shoppingPage">
     <div class="img_box"></div>
-    <span>404</span>
   </div>
 </template>
 <script lang="ts">
